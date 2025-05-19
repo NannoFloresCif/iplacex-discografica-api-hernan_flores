@@ -1,6 +1,5 @@
 # STAGE 1
-
-FROM gradle:jdk21 AS builder
+FROM gradle:jdk21 as builder
 
 WORKDIR /app
 
@@ -17,7 +16,7 @@ FROM openjdk:21-jdk-slim
 
 WORKDIR /app
 
-COPY --from=builder /app/build/libs/discografia-1.jar .
+COPY --from=builder /app/build/libs/*.jar discografia-1.jar
 
 EXPOSE 443
 
