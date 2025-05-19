@@ -1,6 +1,6 @@
 # STAGE 1
 
-FROM gradle:jdk21-focal AS builder
+FROM gradle:jdk21 AS builder
 
 WORKDIR /app
 
